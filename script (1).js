@@ -70,7 +70,7 @@ option3.textContent = quize[currentindex].text3;
 option4.textContent = quize[currentindex].text4;
 
 nextbtn.addEventListener("click", () => {
-    const answerchecked = document.querySelector(`input[type="radio"]:checked`);
+    const answerchecked = document.querySelector(`input[type="radio"]:Checked`);
   
     if (answerchecked === null) {
         alert("please select one answer")
@@ -79,7 +79,7 @@ nextbtn.addEventListener("click", () => {
         if (answerchecked.nextSibling.textContent === quize[currentindex].answer) {
             score++;
             
-
+           
         }
         currentindex++
         if (currentindex < quize.length) {
@@ -88,14 +88,15 @@ nextbtn.addEventListener("click", () => {
             option2.textContent = quize[currentindex].text2;
             option3.textContent = quize[currentindex].text3;
             option4.textContent = quize[currentindex].text4;
-            answerchecked.Checked = false;
             
-        }else{
-         var scores = `your score is ${score + 4}`  
+        }
+        else{
+         var scores = `your score  is  out of  ${quize.length} / ${score} `  
           questiones.innerHTML = scores
           options.innerHTML = "try again goog lock"
         }
     }
+    
 })
 
 

@@ -46,9 +46,7 @@ border-bottom: 1px solid;
 }
 
 @media screen and (max-width:580px){
-    body{
-        background-color: brown;
-    }
+  
     #container{
         font-size: 8px;
         height:300px;
